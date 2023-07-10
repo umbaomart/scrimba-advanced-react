@@ -1,6 +1,7 @@
-function Button(props) {
+function Button({ children, ...props }) {
+    console.log(props);
     return (
-        <button {...props}>{props.children}</button>
+        <button {...props}>{children}</button>
     );
 }
 
