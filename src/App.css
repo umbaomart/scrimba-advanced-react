@@ -31,9 +31,15 @@ button {
   align-items: center;
 }
 
-button > svg {
+button.button-small {
+  padding: 7px 11px;
+  font-size: 12px;
+}
+
+button.button-large {
+  padding: 30px 40px;
+}
+
+.green {
   color: green;
-  margin-right: 7px;
-  height: 30px;
-  width: 30px;
 }
