@@ -1,5 +1,4 @@
 import Button from './components/Button'
-import { FcGoogle } from 'react-icons/fc'
 
 import './App.css'
 
@@ -9,6 +8,7 @@ function App() {
     <main>
       <Button
         size="lg"
+        className='green'
         onClick={() => console.log("Logging in...")}
       >
         Log in with Google

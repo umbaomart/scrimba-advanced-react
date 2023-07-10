@@ -1,20 +1,13 @@
-function Button({ children, size, ...props }) {
+import classNames from "classnames";
 
-    const styles = {
-        sm: 'button-small',
-        md: 'button-medium',
-        lg: 'button-large',
-    };
-    var btn_size;
+function Button({ children, size, className, ...props }) {
 
-   for (const [key, value] of Object.entries(styles)) {
-       if (key === size) {
-        btn_size = value;
-       }
-    }
+    let sizeClass = size ? `button-${size}` : '';
+
+    const allClasses = classNames(sizeClass, className);
 
     return (
-        <button className={btn_size} {...props}>{children}</button>
+        <button className={allClasses} {...props}>{children}</button>
     );
 }
 
