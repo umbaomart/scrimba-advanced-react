@@ -6,10 +6,11 @@ import MenuDropdown from './components/MenuDropdown'
 import './App.css'
 
 function App() {
+
   return (
     <>
       <Menu>
-        <MenuButton buttonText="Sports" toggle={open} />
+        <MenuButton>Sports</MenuButton>
         {
           <MenuDropdown items={["Tennis", "Pickleball", "Racquetball", "Squash"]} />
         }

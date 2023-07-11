@@ -1,7 +1,9 @@
-function MenuButton({ buttonText }) {
+import Button from "./Button"
+
+function MenuButton({ children }) {
 
     return (
-        <button>{buttonText}</button>
+        <Button >{children}</Button>
     )
 }
 
