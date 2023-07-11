@@ -1,12 +1,8 @@
-function MenuDropdown({ items }) {
+function MenuDropdown({ children }) {
 
     return (
         <div className="menu-dropdown">
-            {
-                items.map((item, index) => {
-                    return <div className="menu-item" key={index}>{item}</div>
-                })
-            }
+            {children}
         </div>
     )
 }
