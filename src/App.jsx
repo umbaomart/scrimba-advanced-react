@@ -1,18 +1,20 @@
-import Avatar from './components/Avatar'
-import bob from './assets/bob.jpg'
+import { useState } from 'react'
+import Menu from './components/Menu'
+import MenuButton from './components/MenuButton'
+import MenuDropdown from './components/MenuDropdown'
 
 import './App.css'
 
 function App() {
-
   return (
-    <main>
-      <Avatar src={bob} alt="bob" />
-      <br />
-      <Avatar>BZ</Avatar>
-      <br />
-      <Avatar />
-    </main>
+    <>
+      <Menu>
+        <MenuButton buttonText="Sports" toggle={open} />
+        {
+          <MenuDropdown items={["Tennis", "Pickleball", "Racquetball", "Squash"]} />
+        }
+      </Menu>
+    </>
   )
 }
 
