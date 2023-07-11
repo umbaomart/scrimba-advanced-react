@@ -1,9 +1,9 @@
 import Button from "./Button"
 
-function MenuButton({ children }) {
+function MenuButton({ toggle, children }) {
 
     return (
-        <Button size="lg" variant="" >{children}</Button>
+        <Button size="lg" variant="" onClick={toggle}>{children}</Button>
     )
 }
 

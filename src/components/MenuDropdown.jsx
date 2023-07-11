@@ -1,10 +1,10 @@
-function MenuDropdown({ children }) {
+function MenuDropdown({ children, open }) {
 
-    return (
+    return open ? (
         <div className="menu-dropdown">
             {children}
         </div>
-    )
+    ) : null
 }
 
 export default MenuDropdown
