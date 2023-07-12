@@ -1,11 +1,9 @@
 import Button from "./Button"
 
-function MenuButton({ toggle, children }) {
-
-    console.log(toggle, open);
+function MenuButton({ children }) {
 
     return (
-        <Button size="lg" variant="" onClick={toggle}>{children}</Button>
+        <Button size="lg" variant="" >{children}</Button>
     )
 }
 

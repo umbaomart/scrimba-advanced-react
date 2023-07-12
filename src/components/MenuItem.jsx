@@ -1,6 +1,4 @@
-function MenuItem({children, toggle, open}) {
-
-    console.log(open);
+function MenuItem({children}) {
 
     return (
         <div className="menu-item">{children}</div>

@@ -1,7 +1,8 @@
+import React from "react"
+import { MenuContext } from "./Menu"
 
-function MenuDropdown({ children, toggle, open }) {
-
-    console.log(toggle, open);
+function MenuDropdown({ children }) {
+    const open = React.useContext(MenuContext)
 
     return open ? (
         <div className="menu-dropdown">
