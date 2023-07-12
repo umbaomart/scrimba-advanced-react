@@ -1,16 +1,13 @@
 import React from 'react'
 import {BsStar, BsStarFill} from 'react-icons/bs'
+import { ToggleContext } from './Toggle/Toggle'
 
 export default function Star() {
-    const [starred, setStarred] = React.useState(false)
-
-    function toggle() {
-        setStarred(prevStarred => !prevStarred)
-    }
+    const { on } = React.useContext(ToggleContext);
 
     return (
-        starred ?
-        <BsStarFill className='star filled' onClick={toggle} /> :
-        <BsStar className='star' onClick={toggle} />
+        on ?
+        <BsStarFill className='star filled' /> :
+        <BsStar className='star' />
     )
 }
