@@ -7,15 +7,18 @@ import './App.css'
 const ThemeContext = React.createContext()
 
 export default function App() {
+
   return (
-    <ThemeContext.Provider value="dark">
-      <div className="container dark-theme">
+    <ThemeContext.Provider value={'light'}>
+      <div className="containerdark-theme">
         <Header />
         <Button />
       </div>
     </ThemeContext.Provider>
   )
 }
+
+export { ThemeContext }
 
 // import { useState } from 'react'
 // import Menu from './components/Menu'
@@ -46,4 +49,3 @@ export default function App() {
 // }
 
 // export default App
-export { ThemeContext }
