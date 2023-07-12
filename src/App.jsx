@@ -25,11 +25,7 @@
 
 // export { ThemeContext }
 
-import Menu from './components/Menu'
-import MenuButton from './components/MenuButton'
-import MenuDropdown from './components/MenuDropdown'
-import MenuItem from './components/MenuItem'
-
+import Menu from './components/Menu/index'
 import './App.css'
 
 function App() {
@@ -38,15 +34,15 @@ function App() {
 
   return (
     <Menu>
-      <MenuButton>Sports</MenuButton>
+      <Menu.Button>Sports</Menu.Button>
       {
-        <MenuDropdown>
+        <Menu.Dropdown>
           {
             sports.map((sport, index) => (
-              <MenuItem key={index}>{sport}</MenuItem>
+              <Menu.Item key={index}>{sport}</Menu.Item>
             ))
           }
-        </MenuDropdown>
+        </Menu.Dropdown>
       }
     </Menu>
   )
