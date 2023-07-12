@@ -1,5 +1,5 @@
 import React from 'react'
-import { ThemeContext } from '../App'
+import { ThemeContext } from '../../App'
 
 export default function Header() {
     const {theme} = React.useContext(ThemeContext)

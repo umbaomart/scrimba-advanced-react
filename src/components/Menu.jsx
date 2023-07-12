@@ -3,14 +3,14 @@ import React, { useState } from 'react'
 const MenuContext = React.createContext()
 
 function Menu({ children }) {
-    // const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false)
 
-    // function toggle() {
-    //     setOpen(!open)
-    // }
+    function toggle() {
+        setOpen(!open)
+    }
 
     return (
-        <MenuContext.Provider value={true}>
+        <MenuContext.Provider value={{open, toggle}}>
             <div className="menu">
                {children}
             </div>

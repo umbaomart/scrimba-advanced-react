@@ -1,9 +1,13 @@
+import React from "react"
 import Button from "./Button"
 
+import { MenuContext } from "./Menu"
+
 function MenuButton({ children }) {
+    const { toggle } = React.useContext(MenuContext)
 
     return (
-        <Button size="lg" variant="" >{children}</Button>
+        <Button onClick={toggle} size="lg" variant="" >{children}</Button>
     )
 }
 
