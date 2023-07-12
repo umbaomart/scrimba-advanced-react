@@ -1,9 +1,10 @@
 /**
- * Challenge:
- *
- * 1. Create a new component, ToggleOn, that accepts children
- *    in props
- * 2. Receive the `on` state from context
- * 3. Conditionally render `children` if `on` is true. If `on`
- *    is false, render `null` instead of `children`
- */
+   * Challenge: Refactor the Menu components to use the logic
+   * from Toggle instead of doing any logic of its own.
+   *
+   * 1. Remove all context and state logic from the menu components
+   * 2. Using Toggle and its "sub-components, add a menu to this
+   *    App component below the Star. Make sure to use a separate
+   *    <Toggle> wrapper so the state isn't tied to the Star's
+   *    Toggle state
+   */
