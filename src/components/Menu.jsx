@@ -8,7 +8,6 @@ function Menu({ children }) {
     }
 
     return (
-        // <div className="menu">{ children }</div>
         <div className="menu">
             {React.Children.map(children, (child) => {
                 return React.cloneElement(child, {
