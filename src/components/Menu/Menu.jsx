@@ -1,22 +1,12 @@
-import React, { useState } from 'react'
+import React from "react"
+import Toggle from "../Toggle/index"
 
-const MenuContext = React.createContext()
-
-function Menu({ children }) {
-    const [open, setOpen] = useState(false)
-
-    function toggle() {
-        setOpen(!open)
-    }
-
+export default function Menu({ children, onOpen }) {
     return (
-        <MenuContext.Provider value={{open, toggle}}>
+        <Toggle onToggle={onOpen}>
             <div className="menu">
-               {children}
+                {children}
             </div>
-        </MenuContext.Provider >
+        </Toggle>
     )
 }
-
-export default Menu
-export { MenuContext }

@@ -1,8 +1,9 @@
-function MenuItem({children}) {
+import React from "react"
 
+export default function MenuItem({ children }) {
     return (
-        <div className="menu-item">{children}</div>
+        <div className="menu-item">
+            {children}
+        </div>
     )
 }
-
-export default MenuItem
