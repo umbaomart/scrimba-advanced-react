@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Decision({render}) {
+export default function Decision({children}) {
     const [decision, setDecision] = React.useState(false);
 
     function handleClick() {
@@ -10,7 +10,7 @@ export default function Decision({render}) {
     return (
         <div>
             <button onClick={handleClick}>Change mind</button>
-            {render(decision)}
+            {children(decision)}
         </div>
     )
 }
