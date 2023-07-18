@@ -4,8 +4,10 @@ export default function App() {
     return (
         <div>
             <Decision
-                sayName={(bool) => {
-                    console.log(bool ? "I AM going out" : "I am NOT going out");
+                render={(decision) => {
+                    return (
+                        <h1>Am I going out tonight?? {decision ? 'Yes' : 'Nope...'} </h1>
+                    )
                 }}
             />
         </div>
