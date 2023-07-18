@@ -5,12 +5,13 @@ function App() {
     <>
       <Toggle>
         <Toggle.Button>
-          <Toggle.On>
-            <div className="box filled"></div>
-          </Toggle.On>
-          <Toggle.Off>
-            <div className="box"></div>
-          </Toggle.Off>
+          <Toggle.Display>
+            {(on) => {
+              return (
+                <div className={`box ${on ? 'filled' : ''}`}></div>
+              )
+            }}
+          </Toggle.Display>
         </Toggle.Button>
       </Toggle>
     </>

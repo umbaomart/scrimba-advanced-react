@@ -1,12 +1,10 @@
 /**
  * Challenge:
- * 1. Convert the MenuButton to accept children and
- *    render them. (In this case, the children will
- *    just be the button text)
- * 2. Change the MenuButton below to pass "Sports"
- *    in as a child of the component instead of by
- *    using the `buttonText` prop.
+ * Part 1:
+ * Create a ToggleDisplay component and attach
+ * it to Toggle as Toggle.Display.
  *
- * NOTE: It's fine that the menu is still broken, I
- * promise we're getting there! 😃
+ * It should grab the `on` value from the Toggle context
+ * and render children by calling children as a function,
+ * passing the `on` value to it. (E.g. children(on)).
  */
