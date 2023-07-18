@@ -1,10 +1,13 @@
-import './Style.css'
+import Decision from './components/Decision'
 
 export default function App() {
-
     return (
-        <>
-            <h1>Render Props Part 1</h1>
-        </>
+        <div>
+            <Decision
+                sayName={(bool) => {
+                    console.log(bool ? "I AM going out" : "I am NOT going out");
+                }}
+            />
+        </div>
     )
 }
