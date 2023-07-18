@@ -9,3 +9,7 @@ Build-in
 - useEffect
 - useRef
 - etc.
+
+Custom
+- Combine existing hooks into custom reusable pieces of logic
+- Similar to regular utility functions, but use hooks to access the render cycles of React
