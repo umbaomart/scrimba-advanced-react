@@ -3,7 +3,12 @@ import Star from "./Star";
 function App() {
   return (
     <>
-      {/* <Toggle onToggle={() => console.log('Toggled')}>
+      <Star />
+    </>
+  )
+}
+
+{/* <Toggle onToggle={() => console.log('Toggled')}>
         <Toggle.Button>
           <Toggle.Display>
             {(on) => {
@@ -14,11 +19,6 @@ function App() {
           </Toggle.Display>
         </Toggle.Button>
       </Toggle> */}
-      <Star />
-    </>
-  )
-}
-
 
 // <br />
 
