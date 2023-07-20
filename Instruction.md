@@ -1,7 +1,7 @@
 /**
- * Challenge: Remove all parts of our Toggle component
- * (don't delete the react-icons stars though!) and use
- * the useToggle hook to conditionally render the stars.
- * Make sure to add an onClick that runs the `toggle` function
- * you get from useToggle()
+ * Challenge:
+ * 1. Pass a second parameter called `onToggle` to useToggle.
+ *    Give it a "noop" function `() => {}` as a default.
+ * 2. Think: how can we call this `onToggle` function any time
+ *    `on` changes, but NOT on the first render? 🤔
  */
