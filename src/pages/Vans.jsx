@@ -1,7 +1,7 @@
 export default function Vans() {
     return (
         <>
-            <h1>Vans Page</h1>
+            <h1>Vans page goes here 🚐</h1>
         </>
     )
 }
