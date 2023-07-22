@@ -2,10 +2,11 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Vans from "./pages/Vans";
 import "./App.scss";
-
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import './server';
 
 export default function App() {
+
     return (
         <BrowserRouter>
             <header>
