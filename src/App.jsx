@@ -8,6 +8,8 @@ import Dashboard from "./pages/Host/Dashboard";
 import HostIncome from "./pages/Host/HostIncome";
 import HostReviews from "./pages/Host/HostReviews";
 import "./App.scss";
+import HostVans from "./pages/Host/HostVans";
+import HostVansDetails from "./pages/Host/HostVansDetails";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './server';
@@ -28,7 +30,8 @@ export default function App() {
                         <Route index element={<Dashboard />} />
                         <Route path="income" element={<HostIncome />} />
                         <Route path="reviews" element={<HostReviews />} />
-
+                        <Route path="vans" element={<HostVans />} />
+                        <Route path="vans/:id" element={<HostVansDetails />} />
                     </Route>
                 </Route>
             </Routes>
