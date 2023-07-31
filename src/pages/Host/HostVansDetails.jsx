@@ -4,6 +4,11 @@ import { Link, NavLink, useParams, Outlet } from 'react-router-dom'
 export default function HostVansDetails() {
     const [currentVan, setCurrentVan] = React.useState(null)
     const { id } = useParams();
+    const activeStyles = {
+        fontWeight: "bold",
+        color: "#161616",
+        textDecoration: "underline"
+    }
 
     React.useEffect(() => {
         fetch(`/api/host/vans/${id}`)
@@ -17,7 +22,7 @@ export default function HostVansDetails() {
                 to="../"
                 relative="path"
                 className="back-button"
-                >&larr; Back to all vans</Link>
+            >&larr; Back to all vans</Link>
             <div className="host-van-detail-layout-container">
                 <div className="host-van-detail">
                     <img src={currentVan.imageUrl} />
@@ -31,26 +36,23 @@ export default function HostVansDetails() {
                         <h4>${currentVan.price}/day</h4>
                     </div>
                 </div>
-            </div>
-            <ul>
-                <li>
+                <nav className="host-van-detail-nav">
                     <NavLink
-                        to="../"
-                        relative="path"
+                        to="."
+                        end
+                        style={({ isActive }) => isActive ? activeStyles : null}
                     >Details</NavLink>
-                </li>
-                <li>
                     <NavLink
                         to="photos"
+                        style={({ isActive }) => isActive ? activeStyles : null}
                     >Photos</NavLink>
-                </li>
-                <li>
                     <NavLink
                         to="pricing"
+                        style={({ isActive }) => isActive ? activeStyles : null}
                     >Pricing</NavLink>
-                </li>
-            </ul>
-            <Outlet />
+                </nav>
+                <Outlet />
+            </div>
         </section>
     ) : <h2>Loading...</h2>
 }
