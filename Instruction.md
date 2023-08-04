@@ -1,14 +1,8 @@
 /**
- * Challenge - part 2:
- * Make the host navbar indicate the currently-active route.
+ * Challenge: check out the docs linked in the slide, and see if you
+ * can implement the Outlet Context feature it talks about.
  *
- * Use the following CSS rules:
- *      font-weight: bold;
- *      text-decoration: underline;
- *      color: #161616;
- *
- * I'd recommend using an inline style this time.
- *
- * NOTE: There will be a small bug that we'll fix
- * after you do the challenge.
+ * Part of this challenge will require you to (finally) build out those
+ * nested components. Again, if you don't need CSS practice, you can
+ * skip the styling part, and I'll handle that for you.
  */

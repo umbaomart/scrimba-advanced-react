@@ -51,7 +51,7 @@ export default function HostVansDetails() {
                         style={({ isActive }) => isActive ? activeStyles : null}
                     >Pricing</NavLink>
                 </nav>
-                <Outlet />
+                <Outlet context={{currentVan}} />
             </div>
         </section>
     ) : <h2>Loading...</h2>

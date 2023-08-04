@@ -12,7 +12,6 @@ import HostVans from "./pages/Host/HostVans";
 import HostVansDetails from "./pages/Host/HostVansDetails";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import HostVanDetailsLayout from "./components/HostVanDetailsLayout";
 import HostVanInfo from "./pages/Host/HostVanInfo";
 import HostVanPhotos from "./pages/Host/HostVanPhotos";
 import HostVanPricing from "./pages/Host/HostVanPricing";
