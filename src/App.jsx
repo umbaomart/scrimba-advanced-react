@@ -16,6 +16,7 @@ import HostVanInfo from "./pages/Host/HostVanInfo";
 import HostVanPhotos from "./pages/Host/HostVanPhotos";
 import HostVanPricing from "./pages/Host/HostVanPricing";
 import NotFound from "./pages/NotFound"
+import Login from "./pages/Login";
 
 import './server';
 
@@ -30,6 +31,10 @@ export default function App() {
 
                     <Route path="vans" element={<Vans />} />
                     <Route path="vans/:id" element={<VanDetail />} />
+                    <Route
+                        path="login"
+                        element={<Login />}
+                    />
 
                     <Route path="host" element={<HostLayout />}>
                         <Route index element={<Dashboard />} />
@@ -37,9 +42,9 @@ export default function App() {
                         <Route path="reviews" element={<HostReviews />} />
                         <Route path="vans" element={<HostVans />} />
                         <Route path="vans/:id" element={<HostVansDetails />} >
-                            <Route index element={<HostVanInfo/>} />
-                            <Route path="pricing" element={<HostVanPricing/>} />
-                            <Route path="photos" element={<HostVanPhotos/>} />
+                            <Route index element={<HostVanInfo />} />
+                            <Route path="pricing" element={<HostVanPricing />} />
+                            <Route path="photos" element={<HostVanPhotos />} />
                         </Route>
                     </Route>
                     <Route path="*" element={<NotFound />} />
