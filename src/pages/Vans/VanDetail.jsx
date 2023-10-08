@@ -17,12 +17,11 @@ export default function VanDetail() {
                 setVan(data)
             } catch (err) {
                 setError(err)
+            } finally {
+                setLoading(false)
             }
         }
-
-        // fetch(`/api/vans/${id}`)
-        //     .then(res => res.json())
-        //     .then(data => setVan(data.vans))
+        loadVans()
     }, [id])
 
     if (loading) return <h2>Loading...</h2>
@@ -38,8 +37,8 @@ export default function VanDetail() {
                 to={`../?${search}`}
                 relative="path"
                 className="back-button"
-            >&larr; { `Back to ${type} vans`}</Link>
-            {van ? (
+            >&larr; <span>Back to {type} vans</span></Link>
+            {van && (
                 <div className="van-detail">
                     <img src={van.imageUrl} />
                     <i className={`van-type ${van.type} selected`}>{van.type}</i>
@@ -48,7 +47,7 @@ export default function VanDetail() {
                     <p>{van.description}</p>
                     <button className="link-button">Rent this van</button>
                 </div>
-            ) : <h2>Loading...</h2>}
+            )}
         </div>
     )
 }
